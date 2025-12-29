@@ -27,7 +27,7 @@ export default function Dashboard() {
         const formData = new FormData();
         formData.append("file", file);
 
-        const res = await fetch("http://localhost:8000/process-pdf", {
+        const res = await fetch("https://taskaligner-backend.onrender.com/process-pdf", {
           method: "POST",
           body: formData
         });
