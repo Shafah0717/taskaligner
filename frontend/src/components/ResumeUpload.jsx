@@ -12,7 +12,7 @@ export default function ResumeUpload() {
     const formData = new FormData();
     formData.append("file", file);
 
-    await fetch("http://localhost:8000/parse-resume", {
+    await fetch("https://taskaligner.onrender.com/parse-resume", {
       method: "POST",
       body: formData,
     });
