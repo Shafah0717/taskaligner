@@ -41,7 +41,7 @@ export default function Dashboard() {
       setResult(llmResult);
 
       // 🔥 Persist project
-      await fetch("http://localhost:8000/create-project", {
+      await fetch("https://taskaligner-backend.onrender.com/create-project", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(llmResult)
