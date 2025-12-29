@@ -11,11 +11,11 @@ export default function PMDashboard() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:8000/projects")
+    fetch("https://taskaligner.onrender.com/projects")
       .then(res => res.json())
       .then(setProjects);
 
-    fetch("http://localhost:8000/developers")
+    fetch("https://taskaligner.onrender.com/developers")
       .then(res => res.json())
       .then(setDevelopers);
   }, []);
