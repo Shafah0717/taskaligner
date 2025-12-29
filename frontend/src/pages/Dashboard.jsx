@@ -27,7 +27,7 @@ export default function Dashboard() {
         const formData = new FormData();
         formData.append("file", file);
 
-        const res = await fetch("https://taskaligner-backend.onrender.com/process-pdf", {
+        const res = await fetch("https://taskaligner.onrender.com/process-pdf", {
           method: "POST",
           body: formData
         });
@@ -41,7 +41,7 @@ export default function Dashboard() {
       setResult(llmResult);
 
       // 🔥 Persist project
-      await fetch("https://taskaligner-backend.onrender.com/create-project", {
+      await fetch("https://taskaligner.onrender.com/create-project", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(llmResult)
