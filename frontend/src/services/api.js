@@ -1,7 +1,8 @@
-const API_URL = "http://127.0.0.1:8000/process";
+
+const API_BASE = "https://taskaligner-backend.onrender.com/process";
 
 export async function generatePlan(text) {
-  const res = await fetch(API_URL, {
+  const res = await fetch(API_BASE, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ text }),
