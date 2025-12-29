@@ -46,7 +46,7 @@ export default function DeveloperEditModal({ developer, onClose, onSaved }) {
   const saveAndApprove = async () => {
     console.log("FINAL DEV SENT:", dev);
 
-    await fetch("http://localhost:8000/approve-developer", {
+    await fetch("https://taskaligner.onrender.com/approve-developer", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
