@@ -6,12 +6,12 @@ export default function TechLeadReview() {
   const [selectedDev, setSelectedDev] = useState(null);
 
   useEffect(() => {
-    fetch("https://taskaligner-backend.onrender.com/developers")
+    fetch("https://taskaligner.onrender.com/developers")
       .then(res => res.json())
       .then(setDevelopers);
   }, []);useEffect(() => {
   const fetchDevelopers = () => {
-    fetch("https://taskaligner-backend.onrender.com/developers")
+    fetch("https://taskaligner.onrender.com/developers")
       .then(res => res.json())
       .then(setDevelopers);
   };
@@ -81,7 +81,7 @@ export default function TechLeadReview() {
           setSelectedDev(null);
 
           // 🔁 REFRESH LIST FROM BACKEND
-          fetch("https://taskaligner-backend.onrender.com/developers")
+          fetch("https://taskaligner.onrender.com/developers")
             .then(res => res.json())
             .then(setDevelopers);
         }}
